@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>EntrySignals</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="entry-signals-page">
+  <div class="es-header">
+    <h1>📡 EntrySignals</h1>
+    <div class="es-meta">
+      <span class="es-refreshed" id="last-updated">Loading…</span>
+    </div>
+  </div>
+
+  <div class="es-tab-bar">
+    <button class="es-tab active" data-tab="discovered" id="tab-discovered">🆕 Discovered (0)</button>
+    <button class="es-tab" data-tab="signals" id="tab-signals">🎯 Signals (0)</button>
+  </div>
+
+  <div class="es-controls" id="controls-discovered">
+    <div class="es-toggle">
+      <button class="active" data-window="24h" id="btn-24h">Last 24h (0)</button>
+      <button data-window="7d" id="btn-7d">Last 7d (0)</button>
+    </div>
+    <select id="channel-filter">
+      <option value="">All channels</option>
+    </select>
+  </div>
+
+  <div class="es-controls" id="controls-signals" style="display:none">
+    <select id="channel-filter-signals">
+      <option value="">All channels</option>
+    </select>
+    <select id="ticker-filter">
+      <option value="">All tickers</option>
+    </select>
+    <select id="type-filter">
+      <option value="">All types</option>
+      <option value="entry-hard">🎯 Hard Entry</option>
+      <option value="entry-zone">🎯 Zone</option>
+      <option value="sentiment">🌡️ Sentiment</option>
+      <option value="news">📰 News</option>
+      <option value="education">📚 Lesson</option>
+    </select>
+  </div>
+
+  <div id="content-discovered" class="es-content"></div>
+  <div id="content-signals" class="es-content" style="display:none"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
